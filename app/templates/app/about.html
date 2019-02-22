@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Title  -->
+    <title>Valkyrie System</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'app/img/core-img/favicon.ico'%}">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="{% static 'app/css/core-style.css'%}">
+    <link rel="stylesheet" href="{% static 'app/css/style.css'%}">
+
+    <!-- Responsive CSS -->
+    <link href="{% static 'app/css/responsive.css'%}" rel="stylesheet">
+
+</head>
+<style>
+    @media (max-width:768px){section{padding-top:70%!important;}}
+    @media (max-width:992px){#min{display:none;}}
+    @media (min-width:993px){.card-login{width:500px}  #max{display:none;}}
+    html, body{ height: 100%; margin: 0;}
+    label,a{color:#ff8a12; weight:500;}
+    #about{background-image:url(../../static/app/img/about.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+            height:100%;
+            padding-top:20%;}
+
+
+
+#howto {
+    position: relative;
+    background:#1b1e21;
+}
+
+#howto:after{
+		background:
+					linear-gradient(-45deg, transparent 16px, #1b1e21 0),
+					linear-gradient(45deg, transparent 16px, #1b1e21 0);
+        background-repeat: repeat-x;
+		background-position: left bottom;
+        background-size: 22px 32px;
+        content: "";
+        display: block;
+
+		width: 100%;
+		height: 32px;
+
+ 	    position: relative;
+		top:32px;
+		left:0px;
+	}
+
+#howto:before{
+		background:
+					linear-gradient(-45deg, #1b1e21 16px, red 16px, blue 16px,  transparent 0),
+					linear-gradient(45deg, #1b1e21 16px, transparent 0);
+        background-position: left top;
+        background-repeat: repeat-x;
+        background-size: 22px 32px;
+        content: " ";
+        display: block;
+
+        height: 32px;
+		width: 100%;
+
+		position: relative;
+		bottom: 32px;
+		left:0;
+	}
+
+#process {padding:60px; 0px;}
+
+#contact{position: relative;
+    background:#1b1e21;
+    padding-bottom:60px;}
+#contact:before{
+		background:
+					linear-gradient(-45deg, #1b1e21 16px, red 16px, blue 16px,  transparent 0),
+					linear-gradient(45deg, #1b1e21 16px, transparent 0);
+        background-position: left top;
+        background-repeat: repeat-x;
+        background-size: 22px 32px;
+        content: " ";
+        display: block;
+
+        height: 32px;
+		width: 100%;
+
+		position: relative;
+		bottom: 32px;
+		left:0;
+	}
+</style>
+<body>
+<!-- Preloader -->
+<div id="preloader">
+    <div class="showbox">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2"
+                        stroke-miterlimit="10"></circle>
+            </svg>
+        </div>
+    </div>
+    <div class="questions-area text-center">
+        <p>Please Wait...</p>
+        <ul>
+            <li>Valkyrie Blockchain Trade System</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Gradient Background Overlay -->
+<div class="gradient-background-overlay"></div>
+
+<!-- Header Area Start -->
+<header class="header-area bg-img" style="">
+    <div class="container-fluid h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 h-100">
+                <div class="main-menu h-100">
+                    <nav class="navbar h-100 navbar-expand-lg">
+                        <!-- Logo Area  -->
+                        <a class="navbar-brand" href="{% url 'about' %}"><img
+                                src="{% static 'app/img/core-img/logo.png'%}"
+                                alt="Logo"></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu"
+                                aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i
+                                class="fa fa-bars"></i> Menu
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="studioMenu">
+                            <!-- Menu Area Start  -->
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about'%}">ABOUT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'registerpage'%}">REGISTER</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'login'%}">LOGIN</a>
+                                </li>
+                            </ul>
+                            <!-- Search Form -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Area End -->
+
+<!-- Social Sidebar Area Start -->
+<section id="about" class="about-section text-center" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-white mb-4" style="color:#838383!important;">VALKYRIE SYSTEM</h2>
+                <h3 class="text-white mb-4" style="color:#838383!important;">BLOCKCHAIN NETWORK FOR TRADE</h3>
+                <h4 class="text-white-50" style="color:#ff7b07;">Increase Trust, Transparency and Accountability <br>for
+                    your trade</h4>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects Section -->
+<div id="projects" class="projects-section text-center" style="padding-bottom:40px">
+    <div class="container">
+        <div style="margin:20px">
+            <h1 style="color:#ff7b07;">System Advantages</h1>
+        </div>
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters ">
+            <div class="col-lg-6">
+                <img class="img-fluid mb-3 mb-lg-0" src="{% static 'app/img/hyperledger.png'%}" alt="">
+            </div>
+            <div class="col-lg-6">
+                <h3 class="featured-text text-center text-lg-center">Hyperledger Fabric 기반 <br>허가형 블록체인
+                    플랫폼 </h3><br>
+                <p class="featured-text text-center text-lg-center">IBM 하이퍼레저 패브릭 블록체인 기술을 플랫폼에 <br>적용해
+                    허가된 사용자만 참여할 수 있습니다.<br>하이퍼레저 패브릭은 오픈 소스 모범 사례를 활용하며 <br>비즈니스 환경의 기밀유지와 확장성을 지원합니다.
+                </p>
+                <p class="text-black-50 mb-0"></p>
+            </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div id="max" class="col-lg-6">
+                <img class="img-fluid" src="{% static 'app/img/blockchain.jpeg'%}" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-center">
+                            <h3 class="featured-text text-center text-lg-center">블록체인 기반 문서 관리 시스템 </h3><br>
+                            <p class="featured-text text-center text-lg-center">
+                                블록체인 기반의 스마트 컨트랙트는 계약 이행 및 검증과정이
+                                <br>네트워크로 자동화 되고, 계약실행 조건을 확인하는 사람의 <br>
+                                간섭과 추가 비용이 들지 않습니다.<br>
+                                블록체인 기반 문서 해시 관리로 문서의 위변조를 방지합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="min" class="col-lg-6">
+                <img class="img-fluid" src="{% static 'app/img/blockchain.jpeg'%}" alt="">
+            </div>
+        </div>
+
+        <!-- Project Two Row -->
+        <div class="row align-items-center no-gutters ">
+            <div class="col-lg-6">
+                <img class="img-fluid mb-3 mb-lg-0" src="{% static 'app/img/about1.jpg'%}" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="featured-text text-center text-lg-center">
+                    <h3></h3>
+                    <h3 class="featured-text text-center text-lg-center"> 신속하고 투명한 무역거래 플랫폼 </h3><br>
+                    <p class="text-black-50 mb-0 ">무역 거래를 하고자 할때, 가장 중요한 것은 신뢰입니다.<br>
+                        블록체인 기반 무역 계약 플랫폼을 통해 사업자와 은행,<br> 운송사는 신뢰성 기반의 투명한 거래가 가능해지고<br> 빠른 계약을 통해 많은 기회를 잡을 수
+                        있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="howto" class="projects-section text-center">
+    <div class="container">
+        <div style="margin:20px">
+            <h1 style="color:#ff7b07;">How To Work?</h1>
+        </div>
+        <div>&nbsp</div>
+        <!-- Featured Project Row -->
+        <div class="row align-items-center">
+
+                <img class="img-fluid mx-auto"  src="{% static 'app/img/network.png'%}">
+                <h3 class=" text-center mx-auto" style="color:white;padding-top:20px">VALKYRIE PLATFORM은 FABRIC CA서버에서 인증된 CLIENT가 <br>NODE SDK를 통해 블록체인 네트워크에 기록 및 조회합니다.</h3>
+
+                <p class="text-black-50 mb-0"></p>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<div id="process" class="projects-section text-center" >
+                    <div class="container">
+                        <div style="margin:20px">
+                            <h1 style="color:#ff7b07;">Process</h1>
+                        </div>
+                        <div>&nbsp</div>
+                        <!-- Featured Project Row -->
+
+                        <div class="row align-items-center" style="color:#1d1d1d;">
+                            <div id="min" class="col-lg-6">
+                            <p class="featured-text text-center text-lg-left" style="color:#1d1d1d; font-size:large;">
+                                <img class="img-fluid" src="{% static 'app/img/about_one.png'%}" width = "20" alt="">
+                                수출자가 수입자에게 구매확약서를 전송하고 수입자의 승인시 계약이 체결됩니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_two.png'%}" width = "20" alt="">
+                                수입자가 은행에 신용장발행요청서를 전송해 신용장 개설을 요청합니다. <br>
+                                <img class="img-fluid" src="{% static 'app/img/about_three.png'%}" width = "20" alt="">
+                                은행은 수입자의 개설 요청 수락하고 신용장을 발행합니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_four.png'%}" width = "20" alt="">
+                                은행은 발행한 신용장을 수입자, 수출자에게 전송합니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_five.png'%}" width = "20" alt="">
+                                수출자는 운송사에 선적요청서를 전송해 운송계약을 체결합니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_six.png'%}" width = "20" alt="">
+                                운송사는 물품을 선적하고 수출자에게 유가증권인 선적서류를 전송합니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_seven.png'%}" width = "20" alt="">
+                                수출자는 은행에 선적서류를 전송합니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_eight.png'%}" width = "20" alt="">
+                                은행은 선적서류를 검증하고 수입자에게 전송합니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_nine.png'%}" width = "20" alt="">
+                                수입자는 운송사에 선적서류를 전송하고 물품을 인도받습니다.<br>
+                                <img class="img-fluid" src="{% static 'app/img/about_ten.png'%}" width = "20" alt="">
+                                운송사는 물품을 인도하고 명세서인 인도지시서를 발급해 수입자에게 전송합니다.
+                            </p>
+                        </div>
+                                <div id="min" class="col-lg-6">
+                                    <img class="img-fluid" src="{% static 'app/img/about_process.png'%}" alt="">
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
+<div id="contact" class="projects-section text-center">
+    <div class="container">
+        <div style="margin:20px">
+            <h1 style="color:#ff7b07;">Contact US</h1>
+        </div>
+        <div>&nbsp</div>
+        <!-- Featured Project Row -->
+        <div class="row align-items-center">
+
+                <img class="img-fluid mx-auto" style="width:20%" src="{% static 'app/img/white.png'%}">
+                <h2 style="color:white" class=" text-left mx-auto">COMPANY : OPERATION VALKYRIE<br>
+       ADDRESS : 대한민국 서울특별시 서운로 220 HPE 센터 6층<br>
+                    E-MAIL : valkyrie@valkyrie.online<br>
+                    TEL : 000 - 0000 - 0000</h2>
+
+                <p class="text-black-50 mb-0"></p>
+
+        </div>
+
+
+
+    </div>
+</div>
+<!-- Footer Area Start -->
+<footer class="footer-area">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-12 h-100" style="padding-right:0px;">
+                <div class="footer-content h-100 d-md-flex align-items-center justify-content-between">
+                    <!-- Single Footer Content -->
+                    <div class="single-footer-content">
+                        <i class="fa fa-wifi"></i>
+                        <a>valkyriesystem.online</a>
+                    </div>
+                    <!-- Single Footer Content -->
+                    <div class="single-footer-content">
+                        <i class="fa fa-copyright"></i>
+                        <a>Operation Valkyrie</a>
+                    </div>
+                    <!-- Single Footer Content -->
+                    <div style="height:50px;background:#ff7b07;padding:10px" class="single-footer-content">
+                        <i class="fa fa-file-text-o"></i>
+                        <a href="{% url 'user_manual' %}" target="_blank">User Manual</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Area End -->
+
+
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="{% static 'app/js/jquery/jquery-2.2.4.min.js'%}"></script>
+<!-- Popper js -->
+<script src="{% static 'app/js/popper.min.js'%}"></script>
+<!-- Bootstrap js -->
+<script src="{% static 'app/js/bootstrap.min.js'%}"></script>
+<!-- Plugins js -->
+<script src="{% static 'app/js/plugins.js'%}"></script>
+<!-- Active js -->
+<script src="{% static 'app/js/active.js'%}"></script>
+
+</body>
+<script>
+
+
+</script>
+
+</html>
